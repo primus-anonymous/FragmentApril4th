@@ -51,15 +51,12 @@ public class CitiesListFragment extends Fragment {
             itemView.findViewById(R.id.root).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                        Bundle bundle = new Bundle();
-                        bundle.putParcelable(SELECTED_CITY, city);
-                        getParentFragmentManager()
-                                .setFragmentResult(CITIES_CLICKED_KEY, bundle);
 
-                    } else {
-                        CityDetailsActivity.show(requireContext(), city);
-                    }
+                    getParentFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.fragment_container, CityDetailsFragment.newInstance(city))
+                            .addToBackStack("details")
+                            .commit();
                 }
             });
 

@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
 
@@ -39,6 +40,15 @@ public class CityDetailsFragment extends Fragment {
 
         title = view.findViewById(R.id.title);
         icon = view.findViewById(R.id.icon);
+
+        Toolbar toolbar = view.findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager()
+                        .popBackStack();
+            }
+        });
 
         getParentFragmentManager()
                 .setFragmentResultListener(CitiesListFragment.CITIES_CLICKED_KEY, getViewLifecycleOwner(), new FragmentResultListener() {
