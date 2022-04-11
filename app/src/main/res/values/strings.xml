@@ -6,4 +6,13 @@
     <string name="sam">Самара</string>
     <string name="spb">Санкт-Петербург</string>
     <string name="cities">Cities</string>
+    <string name="action_info">Info</string>
+    <string name="action_share">Share</string>
+    <string name="action_action">Action</string>
+    <string name="action_cities">Cities</string>
+    <string name="action_fragments">Fragments</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_search">Search</string>
 </resources>
