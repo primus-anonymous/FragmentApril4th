@@ -8,4 +8,8 @@
         android:id="@+id/action_fragment"
         android:title="@string/action_fragments" />
 
+    <item
+        android:id="@+id/action_notifications"
+        android:title="@string/action_notifications" />
+
 </menu>

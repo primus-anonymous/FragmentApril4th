@@ -52,6 +52,18 @@ public class MainActivity extends AppCompatActivity implements ToolbarHolder {
                         drawerLayout.close();
 
                         return true;
+
+                    case R.id.action_notifications:
+                        getSupportFragmentManager().popBackStack();
+
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.fragment_container, new NotificationsFragment())
+                                .commit();
+
+                        drawerLayout.close();
+
+                        return true;
+
                 }
                 return false;
             }
